@@ -30,5 +30,18 @@ source venv/bin/activate
 # Install dependencies
 pip install -r requirements.txt
 
+#Train the moddel
+#for train.py file
+python train.py
+This will train the crop yield prediction model and save something like:
+models/yield_model.pkl
+models/scaler.pkl
+
+#for train_risk_model.py
+python train_risk_model.py
+This will train the crop yield prediction model and save something like:
+models/yield_model.pkl
+models/scaler.pkl
+
 #Run the Project
 streamlit run file_name(the main file).py
