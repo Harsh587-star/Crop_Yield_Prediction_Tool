@@ -17,7 +17,7 @@ def show():
             db_port = st.number_input("Port", value=3306, min_value=1, max_value=65535)
         
         with col2:
-            db_password = st.text_input("Password", type="password", value="harsh@618")
+            db_password = st.text_input("Password", type="password", value="YOUR_DB_PASSWORD")
             db_name = st.text_input("Database", value="crop_yield")
         
         col1, col2 = st.columns(2)
