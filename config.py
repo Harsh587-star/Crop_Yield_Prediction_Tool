@@ -7,8 +7,8 @@ load_dotenv()
 DB_CONFIG = {
     "host": os.getenv("DB_HOST", "localhost"),
     "user": os.getenv("DB_USER", "root"),
-    "password": os.getenv("DB_PASSWORD", "harsh@618"),
-    "database": os.getenv("DB_NAME", "crop_yield"),
+    "password": os.getenv("DB_PASSWORD", "Your_db_password"),
+    "database": os.getenv("DB_NAME", "Your_db_name"),
     "port": int(os.getenv("DB_PORT", 3306))
 }
 
