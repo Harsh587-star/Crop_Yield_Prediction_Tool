@@ -60,10 +60,51 @@ It uses machine learning and analytics to predict crop yields, optimize inputs, 
 - Internet connection  
 
 ---
+## ⚙️ Installation
 
-## ⚙️ Installation & Setup
-
-### 1. Clone Repository
-```bash
+# 1. Clone the Repository
 git clone <your-repo-link>
 cd crop-yield-pro
+
+# 2. Create Virtual Environment
+python -m venv venv
+
+# Activate Virtual Environment
+# Windows
+venv\Scripts\activate
+
+# macOS/Linux
+source venv/bin/activate
+
+# 3. Install Dependencies
+pip install --upgrade pip
+pip install -r requirements.txt
+
+# 4. Setup MySQL Database
+# Open MySQL and run:
+# CREATE DATABASE crop_yield_pro;
+
+# Then configure environment variables (create a .env file or config file)
+# Example:
+# DB_HOST=localhost
+# DB_USER=root
+# DB_PASSWORD=your_password
+# DB_NAME=crop_yield_pro
+
+# 5. Run Migrations (if using Django)
+python manage.py migrate
+
+# 6. Train Machine Learning Model (optional)
+python train_model.py
+
+# 7. Run the Application
+streamlit run app.py
+
+# 8. Open in Browser
+# http://localhost:8501
+
+# Optional: Install extra libraries if needed
+pip install xgboost plotly mysql-connector-python
+
+# Optional: Run on different port
+streamlit run app.py --server.port 8502
